@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1A5C56EB-B88F-404C-A363-FF9F6D614A48}</ProjectGuid>
+    <ProjectGuid>{0EA7EE6C-D559-4867-8D8B-48E0197812A0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>SeqlistOJ</RootNamespace>
+    <RootNamespace>Applicationofstring</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
