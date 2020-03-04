@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F876273E-ED52-4E23-AC81-DE76C2685EDE}</ProjectGuid>
+    <ProjectGuid>{F37E50AB-F9A7-4694-A0D1-F1D9A79573CC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>BinaryTreeSize</RootNamespace>
+    <RootNamespace>Simulationofstringfunction</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
