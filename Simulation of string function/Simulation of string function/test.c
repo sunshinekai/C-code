@@ -12,13 +12,13 @@ char* my_strcpy(char* dest, const char* str)
 		NULL;
 
 	return add;
-}
+}   // 字符串的拷贝
 
 //int main()
 //{
 //	char dest[20];
-//	printf("%s\n", strcpy(dest, "hello"));
-//	printf("%s\n", my_strcpy(dest, "hello"));
+//	printf("%s\n", strcpy(dest, "hello world"));
+//	printf("%s\n", my_strcpy(dest, "hello wor1d"));
 //	return 0;
 //}
 
@@ -33,10 +33,11 @@ char* my_strcat(char* dest, const char* str)
 	while (*dest++ = *str++);
 
 	return add;
-}
+}   // 字符串的追加
+
 //int main()
 //{
-//	char dest[80] = { "hello " };
+//	char dest[20] = { "hello " };
 //	printf("%s\n", strcat(dest, "world"));
 //	printf("%s\n", my_strcat(dest, "world"));
 //	return 0;
@@ -72,7 +73,7 @@ char *my_strstr(const char* str1, const char* str2)
 	}
 
 	return NULL;
-}
+}   //字符串的匹配(并输出匹配之后的字符串)
 
 //int main()
 //{
@@ -93,13 +94,13 @@ char *  my_strchr(const char * string, int ch)
 		return((char *)string);
 
 	return(NULL);
-}
+}   // 查找字符串s中首次出现ch字符的位置
 
 //int main()
 //{
 //	char string[20];
 //	char *ptr, c = 'r';
-//	strcpy(string, "Thisisastring");
+//	strcpy(string, "This is a string");
 //	ptr = my_strchr(string, c);
 //
 //	if (ptr)
@@ -131,7 +132,7 @@ int my_strcmp(const char * src, const char * dst)
 		ret = 1;
 
 	return ret;
-}
+}	// 字符串的比较
 
 //int main()
 //{
@@ -158,7 +159,7 @@ void * my_memcpy(void * dst, const void * src, size_t count)
 	}
 
 	return(ret);
-}
+}   // 从源内存地址的起始位置开始拷贝若干个字节到目标内存地址
 
 //int main()
 //{
@@ -172,7 +173,7 @@ void * my_memcpy(void * dst, const void * src, size_t count)
 
 
 // 7.模拟实现memmove
-void * My_memmove(void * dst, const void * src, size_t count)
+void * my_memmove(void * dst, const void * src, size_t count)
 {
 	void * ret = dst;
 	if (dst <= src || (char *)dst >= ((char *)src + count))
@@ -199,14 +200,17 @@ void * My_memmove(void * dst, const void * src, size_t count)
 	}
 
 	return(ret);
-}
+}   // 拷贝字节
+
+/* 若目标区域和源区域有重叠的话，能够保证源串在被覆盖之前将
+重叠区域的字节拷贝到目标区域中，但复制后源内容会被更改 */
 
 //int main()
 //{
 //	char str1[20] = "abcd";
 //	char str2[] = "abcdef";
 //	printf("%s\n", memmove(str1, str2, 2));
-//	printf("%s\n", My_memmove(str1, str2, 2));
+//	printf("%s\n", my_memmove(str1, str2, 2));
 //	return 0;
 //}
 
@@ -223,16 +227,16 @@ char * my_strncpy(char * dest, const char * source, size_t count)
 	while (--count)
 		*dest++ = '\0';
 
-	return(start);
-}
+	return start;
+}	// 将指定长度的字符串复制到字符数组中
 
 
 //int main()
 //{
-//	char s1[20] = { "I love you" };
-//	char s2[20];
-//	printf("%s\n", strncpy(s2, s1, 1));
-//	printf("%s\n", my_strncpy(s2, s1, 1));
+//	char *s1 = "I love you" ;
+//	char s2[20] = { 0 };
+//	printf("%s\n", strncpy(s2, s1, 8));
+//	printf("%s\n", my_strncpy(s2, s1, 8));
 //	return 0;
 //}
 
@@ -252,11 +256,11 @@ char *  my_strncat(char * front, const char * back, size_t count)
 
 	*front = '\0';
 	return(start);
-}
+}	// 在字符串的结尾追加n个字符
 
 //int main()
 //{
-//	char s1[20] = { "Hello World" };
+//	char s1[20] = { "Hello World " };
 //	char s2[20] = { "and me" };
 //	char *s3 = strncat(s1, s2, 3);
 //	char *s4 = my_strncat(s1, s2, 3);
@@ -317,7 +321,7 @@ int my_strncmp(const char *first, const char *last, size_t  count)
 	}
 
 	return 0;
-}
+}	// 把 first 和 last 进行比较，最多比较前 count 个字节
 
 
 int main()
