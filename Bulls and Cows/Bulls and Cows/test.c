@@ -20,7 +20,7 @@ void game()
 {
 	int num = rand() % M + 1;
 	int n = 0, i = 0;
-	printf("请输入一个1-%d的数字，你总共有五次机会:\n",M);
+	printf("请输入一个1-%d的数字，你总共有%d次机会:\n",M,N);
 	scanf("%d", &n);
 
 	while (i < N)
@@ -31,7 +31,7 @@ void game()
 			break;
 		}
 
-		if (i == 4)
+		if (i == N - 1)
 		{
 			printf("很遗憾你没有猜对,游戏结束.\n");
 			printf("正确答案为:%d\n", num);
@@ -50,7 +50,7 @@ void game()
 			printf("请重新输入:\n");
 		}
 
-		if (i == 3)
+		if (i == N - 2)
 		{
 			printf("你还有最后一次机会!\n");
 		}
