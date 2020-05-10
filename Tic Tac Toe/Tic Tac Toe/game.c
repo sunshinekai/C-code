@@ -1,9 +1,12 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include"game.h"
+
 void InitBoard(char board[ROW][COL], int row, int col)
 {
 	memset(board, ' ', row*col *sizeof(char));
 }
+
+
 void ShowBoard(char board[ROW][COL], int row, int col)
 {
 	int i = 0; int j = 0;
@@ -32,6 +35,8 @@ void ShowBoard(char board[ROW][COL], int row, int col)
 		printf("\n");
 	}
 }
+
+
 void PlayerMove(char board[ROW][COL], int row, int col)
 {
 	int x = 0;
@@ -59,6 +64,8 @@ void PlayerMove(char board[ROW][COL], int row, int col)
 		}
 	}
 }
+
+
 static int IsFull(char board[ROW][COL], int row, int col)
 {
 	int i = 0;
@@ -75,6 +82,8 @@ static int IsFull(char board[ROW][COL], int row, int col)
 	}
 	return 1;
 }
+
+
 int IsWin(char board[ROW][COL], int row, int col)
 {
 	int i = 0;
@@ -103,6 +112,8 @@ int IsWin(char board[ROW][COL], int row, int col)
 	}
 	return ' ';//没有赢家，没有平局
 }
+
+
 void ComputerMove(char board[ROW][COL], int row, int col)
 {
 	int x = 0;
