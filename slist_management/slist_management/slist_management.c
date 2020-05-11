@@ -1,12 +1,14 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <stdlib.h>
+#include<time.h>
+
 struct student
 {
 	int num;
+	float score;
 	char name[10];
 	char sex[3];
-	float score;
 	struct student* next;
 };
 
@@ -47,6 +49,19 @@ void Printlist(StuN* head)
 	}
 }
 
+void SListDestory(StuN** pplist)
+{
+	StuN* cur = *pplist;
+
+	while (cur)
+	{
+		StuN* next = cur->next;
+		free(cur);
+		cur = next;
+	}
+	*pplist = NULL;
+}	// 单链表的销毁
+
 int main()
 {
 	char judge;
@@ -56,16 +71,15 @@ int main()
 	while (1)
 	{
 		printf("请输入学号、姓名、性别、成绩:\n");
-		scanf("%d%s%s%f", &nNode.num, nNode.name, nNode.sex, &nNode.score);
+		scanf("%d%s%s%f", &nNode.num, &nNode.name, &nNode.sex, &nNode.score);
 		insertNode(head, nNode);
 		Printlist(head);
-		setbuf(stdin, NULL);
+		fflush(stdin);
 		printf("是否继续输入学生信息?(Y/N)");
 		judge = getchar();
 		if (judge == 'N' || judge == 'n')
 			break;
 	}
-	free(head);
-	head = NULL;
+	SListDestory(&head);
 	return 0;
 }
