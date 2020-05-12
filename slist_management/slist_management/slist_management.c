@@ -1,7 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <stdlib.h>
-#include<time.h>
+#include <windows.h>
+#include <time.h>
 
 struct student
 {
@@ -70,6 +71,7 @@ int main()
 	head->next = NULL;
 	while (1)
 	{
+		system("CLS");
 		printf("请输入学号、姓名、性别、成绩:\n");
 		scanf("%d%s%s%f", &nNode.num, &nNode.name, &nNode.sex, &nNode.score);
 		insertNode(head, nNode);
