@@ -7,7 +7,9 @@ int main()
 	int input = 0;
 	do
 	{
-		printf("1.添加通讯录信息  2.查找通讯录信息");
+		printf("1.添加通讯录信息  2.查找通讯录信息\n");
+		printf("3.删除通讯录信息  4.修改通讯录信息\n");
+		printf("\n");
 	} while (input);
 	return 0;
 }
