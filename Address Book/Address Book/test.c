@@ -1,15 +1,26 @@
-#define _CRT_SECURE_NO_WARNINGS 1
-#include <stdio.h>
 #include "Address Book.h"
+
+void TestAddressBook()
+{
+	AddressBook addressbook;
+	AddressBookInit(&addressbook);
+	/*AddressInfo info1 = {"杨佳琪", "110", 18, Man};
+	AddressBookAdd(&addressbook, &info1);
+
+	AddressInfo info2 = { "小王", "111", 19, Man };
+	AddressBookAdd(&addressbook, &info2);
+
+	AddressInfo info3 = { "小李", "111", 19, Man };
+	AddressBookAdd(&addressbook, &info3);
+	AddressBookSave(&addressbook, "addressfile.bin");
+	AddressBookPrint(&addressbook);*/
+
+	AddressBookLoad(&addressbook, "addressfile.bin");
+	AddressBookPrint(&addressbook);
+}
+
 int main()
 {
-	printf("================");
-	int input = 0;
-	do
-	{
-		printf("1.添加通讯录信息  2.查找通讯录信息\n");
-		printf("3.删除通讯录信息  4.修改通讯录信息\n");
-		printf("\n");
-	} while (input);
+	TestAddressBook();
 	return 0;
 }

@@ -81,6 +81,7 @@
     <ClInclude Include="Address Book.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="add.cpp" />
     <ClCompile Include="Address Book.c" />
     <ClCompile Include="test.c" />
   </ItemGroup>
